@@ -1,0 +1,227 @@
+<mvc:View
+	controllerName="dreambankv2.controller.View1"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<VBox
+		class="sapUiSmallMargin">
+
+		<HBox class="botones">
+			<Button
+				text="Nuevo Aporte"
+				press="handleNav"
+                class="boton"
+                icon="sap-icon://add-employee"
+                type="Transparent">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p1" />
+				</customData>
+			</Button>
+			<Button
+				text="To 2"
+				press="handleNav"
+                class="boton"
+                                icon="sap-icon://add-employee"
+                type="Transparent">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p2" />     
+				</customData>
+			</Button>
+			<Button
+				text="To 3"
+				press="handleNav"
+                class="boton"
+                                icon="sap-icon://add-employee"
+                type="Transparent">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p3" />
+				</customData>
+			</Button>
+			<Button
+				text="To 4"
+				press="handleNav"
+                class="boton"
+                                icon="sap-icon://add-employee"
+                type="Transparent">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p4" />
+				</customData>
+			</Button>
+		</HBox>
+
+		<NavContainer
+			id="navCon"
+			width="100%"
+			height="850px"
+			class="navContainerControl sapUiSmallMarginBottom">
+			<Page id="p1" title="Regístrate para realizar un aporte">
+				<content>
+					<Input id="inputCedula" placeholder="Cédula"/>
+					<Input id="inputNombre" placeholder="Nombre"/>
+					<Input id="inputEmpresa" placeholder="Empresa"/>
+					<Input id="inputTelefono" placeholder="Teléfono"/>
+					<Input id="inputCorreo" placeholder="Correo electrónico"/>
+					<Button class ="mi-boton" id="mi-boton" icon="sap-icon://save" text="Guardar" press="onSubmit"/>
+        <Table id="idProductsTable"
+        mode="SingleSelect"
+        selectionChange=".onItemPress"
+        includeItemInSelection="true"
+        
+		inset="false"
+		items="{
+			path: '/Aportadores',
+			sorter: {
+				path: 'nombre'
+			}
+		}"
+        itemPress="onItemPress">
+       
+					
+
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Aportadores registrados:"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="Cedula" />
+                
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="Nombre" />
+			</Column>
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Empresa" />
+			</Column>
+
+			<Column
+				hAlign="Center">
+				<Text text="Telefono" />
+			</Column>
+            			<Column
+				hAlign="Center">
+				<Text text="Correo" />
+			</Column>
+		</columns>
+
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier
+						text="{ID}"/>
+					<Text
+						text="{nombre}" />
+					<Text
+						text="{empresa}" />
+                        					<Text
+						text="{telefono}" />
+                        					<Text
+						text="{correo}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+        
+	</Table>
+    <ToolbarSpacer />
+
+<ToolbarSeparator design="Bold" />
+<Panel id="idPanel" visible="false">
+    <content>
+        <VBox JustifyContent="Center" class='detalle'>
+            <HBox class="imagen">
+                <Image src="https://b7q5h9f5.rocketcdn.me/wp-content/uploads/2021/05/De-emprendedor-a-empresario-1024x576.jpg" width="200px" height="100%" class="imagen"/>
+            </HBox>
+            <HBox>
+                <Label text="ID:" width="6rem" />
+                <Text text="{ID}" />
+            </HBox>
+            <HBox>
+                <Label text="Nombre:" width="6rem" />
+                <Text text="{nombre}" />
+            </HBox>
+            <HBox>
+                <Label text="Empresa:" width="6rem" />
+                <Text text="{empresa}" />
+            </HBox>
+            <HBox>
+                <Label text="Teléfono:" width="6rem" />
+                <Text text="{telefono}" />
+            </HBox>
+            <HBox>
+                <Label text="Correo:" width="6rem" />
+                <Text text="{correo}" />
+            </HBox>
+        </VBox>
+    </content>
+</Panel>
+				</content>
+			</Page>
+			<Page
+				id="p2"
+				title="Page 2" >
+                <content >
+                <Image  src="https://thumbs.dreamstime.com/b/under-construction-sign-7718446.jpg"  								
+                                backgroundSize="contain"
+								backgroundPosition="center center"
+                                
+								width="80em"
+                                />
+                </content>
+				<footer><Toolbar><Button text="Action 2" /></Toolbar></footer>
+			</Page>
+			<Page 
+				id="p3"
+				title="Page 3" >
+                <content >
+                <Image  src="https://thumbs.dreamstime.com/b/under-construction-sign-7718446.jpg"  								
+                                backgroundSize="contain"
+								backgroundPosition="center center"
+                                
+								width="80em"
+                                />
+                </content>
+				<footer><Toolbar><Button text="Action 3" /></Toolbar></footer>
+			</Page>
+			<Page
+				id="p4"
+				title="Page 4" >
+                <content >
+                <Image  src="https://thumbs.dreamstime.com/b/under-construction-sign-7718446.jpg"  								
+                                backgroundSize="contain"
+								backgroundPosition="center center"
+                                
+								width="80em"
+                                />
+                </content>
+				<footer><Toolbar><Button text="Action 4" /></Toolbar></footer>
+			</Page>
+		</NavContainer>
+	</VBox>
+</mvc:View>
