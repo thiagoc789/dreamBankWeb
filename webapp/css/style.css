@@ -36,6 +36,13 @@
     margin-top: 20px;
   }
   
-.imagen{
+.imagen {
     margin-bottom: 20px;
+    border-radius: solid;
+    border-color: rgba(155, 120, 120, 0.651);
+}
+
+.sapMImg{
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(221, 8, 8, 0.651);
 }

@@ -156,7 +156,8 @@
     <content>
         <VBox JustifyContent="Center" class='detalle'>
             <HBox class="imagen">
-                <Image src="https://b7q5h9f5.rocketcdn.me/wp-content/uploads/2021/05/De-emprendedor-a-empresario-1024x576.jpg" width="200px" height="100%" class="imagen"/>
+                <Image src="https://b7q5h9f5.rocketcdn.me/wp-content/uploads/2021/05/De-emprendedor-a-empresario-1024x576.jpg"
+                 width="200px" height="100%"/>
             </HBox>
             <HBox>
                 <Label text="ID:" width="6rem" />
